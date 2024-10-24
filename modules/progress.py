@@ -20,7 +20,7 @@ finished_tasks = []
 recorded_results = []
 recorded_results_limit = 2
 
-@space.GPU()
+@spaces.GPU()
 def start_task(id_task):
     global current_task
 
