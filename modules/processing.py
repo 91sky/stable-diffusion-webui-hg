@@ -5,6 +5,7 @@ import math
 import os
 import sys
 import hashlib
+import spaces
 from dataclasses import dataclass, field
 
 import torch
@@ -815,7 +816,7 @@ def create_infotext(p, all_prompts, all_seeds, all_subseeds, comments=None, iter
 
     return f"{prompt_text}{negative_prompt_text}\n{generation_params_text}".strip()
 
-
+@spaces.GPU()
 def process_images(p: StableDiffusionProcessing) -> Processed:
     if p.scripts is not None:
         p.scripts.before_process(p)
