@@ -1,7 +1,7 @@
 import base64
 import io
 import time
-import spaces
+
 
 import gradio as gr
 from pydantic import BaseModel, Field
@@ -20,7 +20,7 @@ finished_tasks = []
 recorded_results = []
 recorded_results_limit = 2
 
-@spaces.GPU()
+
 def start_task(id_task):
     global current_task
 
