@@ -1,4 +1,5 @@
 import sys
+import spaces
 import contextlib
 from functools import lru_cache
 
@@ -32,6 +33,7 @@ def cuda_no_autocast(device_id=None) -> bool:
     )
 
 
+@spaces.GPU
 def get_cuda_device_id():
     return (
         int(shared.cmd_opts.device_id)
